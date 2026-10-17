@@ -186,7 +186,7 @@
 <section class="view" hidden="" id="floor"><div class="intro"><h1 id="floorTitle">Creative Studio</h1><p>Explore the room, then tap the employee you need.</p></div><div class="floor-toolbar"><button type="button" id="backToHQ">← Back to HQ</button><span id="floorCounter" aria-live="polite"></span></div><div class="floorpick" id="floorpick"></div><button type="button" class="studio-entry" id="floorStudioEntry" hidden>Explore shared Creative Studio →</button><button type="button" class="studio-entry" id="floorSalesEntry" hidden>Explore shared Sales &amp; Production →</button><button type="button" class="studio-entry" id="floorOperationsEntry" hidden>Explore shared Operations →</button><div class="panel"><img alt="Illustrated department room" class="floorimg" id="floorImg" src="assets/art-03.webp"/><div class="employee-row" id="floorPeople"></div></div><p class="note">Each room is part of the original headquarters illustration. Tap a teammate to view their profile.</p></section>
 <section class="view" hidden id="sales">
 <div class="intro"><h1>Sales &amp; Production</h1><p>Meet Otto, Penny, and Nora in their shared workspace, one level below Creative Studio.</p></div>
-<div class="floor-toolbar"><button type="button" id="salesBack">← Back to HQ</button><button type="button" class="studio-entry" id="salesToStudio">Up to Creative Studio ↑</button></div>
+<div class="floor-toolbar"><button type="button" id="salesBack">← Back to HQ</button><button type="button" class="studio-entry" id="salesToStudio">Up to Creative Studio ↑</button> <button type="button" class="studio-entry" id="salesToOperations">Down to Operations ↓</button></div>
 <div class="studio-frame"><img src="assets/sales-production-approved-v1.png" width="1536" height="1024" alt="Sales and Production: Otto at his systems desk on the left, Penny at the wholesale buyer desk in the center, and Nora at her sewing and fulfillment workbench on the right, beneath a timber ceiling with mountain views."/>
 <button class="studio-target" data-studio-person="otto" style="left:4%;top:25%;width:24%;height:39%" aria-label="Open Otto's profile"></button>
 <button class="studio-target" data-studio-person="penny" style="left:42%;top:24%;width:24%;height:29%" aria-label="Open Penny's profile"></button>
@@ -263,6 +263,7 @@ $('#enterOperations').onclick=openOperations;
 $('#floorOperationsEntry').onclick=openOperations;
 $('#operationsBack').onclick=()=>show('hq');
 $('#operationsToSales').onclick=openSales;
+$('#salesToOperations').onclick=openOperations;
 $('#enterSales').onclick=openSales;
 $('#floorSalesEntry').onclick=openSales;
 $('#studioToSales').onclick=openSales;
