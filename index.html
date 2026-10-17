@@ -250,7 +250,7 @@ let activeFloor=0,activeLayout='desktop',filter='All',previousFocus=null;
 const phone=()=>window.matchMedia('(max-width:700px)').matches;
 const currentFloors=()=>activeLayout==='mobile'?mobileFloors:desktopFloors;
 function show(v){document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!==v);document.querySelectorAll('[data-go]').forEach(x=>x.classList.toggle('active',x.dataset.go===v));window.scrollTo({top:0,behavior:'instant'})}
-function openFloor(index,layout){activeLayout=layout|| (phone()?'mobile':'desktop');activeFloor=Math.min(Math.max(index,0),currentFloors().length-1);renderFloor();show('floor')}
+function openFloor(index,layout){activeLayout=layout|| (phone()?'mobile':'desktop');activeFloor=Math.min(Math.max(index,0),currentFloors().length-1);if(activeLayout==='desktop'){if(activeFloor===0){openStudio();return}if(activeFloor===1){openSales();return}if(activeFloor===2){openOperations();return}}else if(activeFloor===0){openStudio();return}renderFloor();show('floor')}
 document.querySelectorAll('[data-go]').forEach(x=>x.onclick=()=>{if(x.dataset.go==='floor')openFloor(0,phone()?'mobile':'desktop');else show(x.dataset.go)});
 $('#fullImg').src=art.full;
 document.querySelectorAll('[data-layout][data-level]').forEach(x=>x.addEventListener('click',()=>openFloor(Number(x.dataset.level),x.dataset.layout)));
