@@ -207,7 +207,7 @@
  <div class="intro"><h1>Creative Studio</h1><p>Meet Tilly, Sage, and Nash in their shared workspace.</p></div>
  <div class="floor-toolbar"><button type="button" id="studioBack">← Back to HQ</button><button type="button" class="studio-entry" id="studioToSales">Down to Sales &amp; Production ↓</button></div>
  <div class="studio-frame">
-  <picture><source media="(max-width:700px)" srcset="assets/creative-mobile-tilly-sage-approved-v1.png"><img src="assets/creative-studio-approved-v1.png" alt="Shared Creative Studio: Tilly at the fabric workbench on the left, Sage at the design monitors in the center, and Nash at the marketing desk on the right, with the rooftop lounge beyond." id="studioArt"/></picture>
+  <picture><source media="(max-width:700px)" srcset="assets/creative-studio-approved-v1.png"><img src="assets/creative-studio-approved-v1.png" alt="Shared Creative Studio: Tilly at the fabric workbench on the left, Sage at the design monitors in the center, and Nash at the marketing desk on the right, with the rooftop lounge beyond." id="studioArt"/></picture>
   <button class="studio-target" data-studio-person="tilly" style="left:6%;top:31%;width:24%;height:44%" aria-label="Open Tilly's profile"></button>
   <button class="studio-target" data-studio-person="art" style="left:35%;top:34%;width:26%;height:43%" aria-label="Open Sage's profile"></button>
   <button class="studio-target" data-studio-person="marketing" class="desktop-only-hotspot" style="left:66%;top:39%;width:27%;height:43%" aria-label="Open Nash's profile"></button>
@@ -273,7 +273,7 @@ $('#studioBack').onclick=()=>show('hq');
 $('#floorStudioEntry').onclick=openStudio;
 document.querySelectorAll('[data-studio-person]').forEach(b=>b.addEventListener('click',()=>{const e=employees.find(x=>x.id===b.dataset.studioPerson);if(e)openPerson(e)}));
 function renderFloor(){const floors=currentFloors(),f=floors[activeFloor];
- $('#floorOperationsEntry').hidden=!(activeLayout==='desktop' && activeFloor===2);$('#floorStudioEntry').hidden=!(activeFloor===0);$('#floorSalesEntry').hidden=!(activeLayout==='desktop'?activeFloor===1:[2,3].includes(activeFloor));$('#floorTitle').textContent=f.name;$('#floorCounter').textContent='Floor '+(floors.length-activeFloor)+' of '+floors.length;
+ $('#floorOperationsEntry').hidden=!(activeLayout==='desktop' && activeFloor===2);$('#floorStudioEntry').hidden=!(activeFloor===0);$('#floorSalesEntry').hidden=!(activeLayout==='desktop' && activeFloor===1);$('#floorTitle').textContent=f.name;$('#floorCounter').textContent='Floor '+(floors.length-activeFloor)+' of '+floors.length;
  $('#floorImg').src=f.image;$('#floorImg').alt=f.name+' illustrated workspace with '+f.ids.length+' employees';
  $('#floorpick').innerHTML='';floors.forEach((item,i)=>{const b=document.createElement('button');b.className=i===activeFloor?'active':'';b.textContent='Floor '+(floors.length-i);b.setAttribute('aria-label','Floor '+(floors.length-i)+': '+item.name);b.setAttribute('aria-pressed',String(i===activeFloor));b.onclick=()=>openFloor(i,activeLayout);$('#floorpick').appendChild(b)});
  $('#floorPeople').innerHTML='';f.ids.forEach(id=>{const e=employees.find(x=>x.id===id);if(!e)return;const b=document.createElement('button');b.innerHTML='<div class="floor-person">'+(approvedPortraits[e.id]?'<img class="floor-face" src="'+approvedPortraits[e.id]+'" alt="">':'')+e.name+'</div><small>'+e.role+'</small>';b.onclick=()=>openPerson(e);$('#floorPeople').appendChild(b)})
