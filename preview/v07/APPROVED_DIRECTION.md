@@ -44,3 +44,7 @@ These floor assignments were already settled. **Do not re-decide or reorganize t
 ## Next staging work
 
 Unify desktop/mobile layout around the same four-floor artwork and room navigation. Verify responsive full-building fit, three-person floor assignments, character/portrait consistency, room presentation, hotspot links, Cat Hunt, and mobile Safari behavior. Present staging for owner approval before touching the live homepage.
+
+## Living HQ scene rotation and future team expansion
+
+**Owner vision, October 18, 2026:** Keep the established four-floor cutaway HQ, while eventually introducing multiple approved scenes with employees in different positions, matched interactive hotspots, more genuinely visible Easter eggs (especially a rooftop parrot), and room for podcast collaborators or future hires in rear/adjacent rooms. Use approved employee likenesses from the master document. Preserve original scene as the fallback. Avoid automatic generative replacements of approved building imagery or characters. Keep scene geometry and hotspot coordinates coupled, so links remain accurate. Make new scenes and character changes owner-reviewable before they enter rotation. Add new employees/rooms only when roles and artwork are approved. The current priority remains a reliable usable HQ; no requirement to run an hourly automation or rotate images before alternate scenes are approved.
