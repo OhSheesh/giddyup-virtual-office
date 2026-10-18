@@ -31,6 +31,16 @@ These floor assignments were already settled. **Do not re-decide or reorganize t
 5. Prototype 07 is a **staging workspace**, not approval to publish to the live HQ. Review on actual iPhone Safari and desktop before requesting live rollout.
 6. The live homepage currently has older six-floor mobile behavior. That is an implementation mismatch to resolve **after** the four-floor staging version passes review.
 
+## Clarification: Keep the interactive whole-building front page
+
+**Owner clarification, October 18, 2026:** The single unified four-floor design **must retain a distinct HQ front page showing the entire cutaway building**. The whole-building entrance and the four department pages are complementary, not competing alternatives.
+
+- **Entrance / HQ overview:** Show all four floors and employees in their individual rooms, visually engaged in work, with the lively miniature-world / Sims-like feeling of the approved building concept. Preserve the existing full-building illustration as the visual starting point. Do not replace the entrance with a floor-only selector, portraits-only directory, or an image of one room.
+- **Explore / department pages:** Enter any of the four established floors to see that department's approved room artwork and its three assigned employees. Retain direct paths to employee profiles and ChatGPT actions.
+- **Responsive consistency:** Desktop and mobile must offer the same entrance-to-floors experience and same people/rooms; adapt scale and controls for mobile without cropping the entire building or reverting to six floors.
+- **Living-world ambition:** The owner wants the characters to feel like tiny Sims working in the building. Subtle motion or interactive activity may be explored in staging, but this is **not approval to invent or replace characters, alter approved likenesses, or claim that animation already exists**. Review any new animations or artwork before publishing.
+- **Keep settled work settled:** Existing approved four-floor assignments, correct portraits, employee identities, and room designs remain locked. New layout work must integrate rather than recreate them.
+
 ## Next staging work
 
 Unify desktop/mobile layout around the same four-floor artwork and room navigation. Verify responsive full-building fit, three-person floor assignments, character/portrait consistency, room presentation, hotspot links, Cat Hunt, and mobile Safari behavior. Present staging for owner approval before touching the live homepage.
